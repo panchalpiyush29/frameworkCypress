@@ -1,0 +1,5 @@
+{
+  "username": "standard_user",
+  "password": "secret_sauce",
+  "incorrectUsername" : "locked_out_user"
+}
