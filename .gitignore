@@ -1,1 +1,3 @@
 /node_modules/
+/cypress/videos/
+cypress/videos/loginTest.cy.js.mp4
