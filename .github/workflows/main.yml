@@ -19,9 +19,12 @@ jobs:
         with:
           build: npm run test
           browser: chrome
+          failOnStderr: true
+          continueOnError: true
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.0.0
         with:
              name: Test Report
              path: cypress/reports/html/index.html
+             condition: succeededOrFailed()
