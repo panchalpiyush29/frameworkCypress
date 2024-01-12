@@ -17,7 +17,8 @@ jobs:
         with:
           browser: chrome
 
-      - name: Upload a Build Artifact
+      - name: Test Report
+        if: success() || failure()
         uses: actions/upload-artifact@v4.0.0
         with:
           name: Test Report
