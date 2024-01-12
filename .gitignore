@@ -1,4 +1,4 @@
 /node_modules/
 /cypress/videos/
-cypress/videos/loginTest.cy.js.mp4
-cypress/reports/html/index.html
+/cypress/reports/html/
+/cypress/screenshots/
