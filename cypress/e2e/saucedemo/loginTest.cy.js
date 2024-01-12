@@ -13,7 +13,7 @@ describe('Saucedemo : login test', () => {
     })
 
     it('login test - locked out user', () => {
-        cy.saucelogin(loginData.username, loginData.password)
+        cy.saucelogin(loginData.incorrectUsername, loginData.password)
         cy.contains('Epic sadface: Sorry, this user has been locked out.')
     })
 })
