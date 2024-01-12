@@ -1,10 +1,12 @@
 name: Cypress Tests using Cypress Docker Image
-
 on: push
-
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
+
+    container:
+      image: cypress/browsers:latest
+      options: --user 1001
 
     steps:
       - name: Checkout
@@ -13,8 +15,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: npm build
-          run: npm run test
           browser: chrome
 
       - name: Upload a Build Artifact
