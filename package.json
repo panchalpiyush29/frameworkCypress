@@ -4,16 +4,15 @@
   "description": "base cypress framework",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run --browser chrome --headed",
-    "myTest": "cypress run --browser chrome --headed --spec 'cypress/e2e/saucedemo/loginTest.cy.js'"
+    "test": "cypress run --browser chrome --headed --config-file staging.config.js",
+    "myTest": "cypress run --browser chrome --headed --spec 'cypress/e2e/saucedemo/loginTest.cy.js'",
+    "apiTests": "cypress run --spec 'cypress/e2e/apiTests/crud.cy.js' --config-file staging.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.2",
-    "cypress-dotenv": "^2.0.0",
-    "cypress-mochawesome-reporter": "^3.8.0",
-    "dotenv": "^16.3.1"
+    "cypress-mochawesome-reporter": "^3.8.0"
   }
 }

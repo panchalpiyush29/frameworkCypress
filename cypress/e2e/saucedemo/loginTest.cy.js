@@ -6,7 +6,7 @@ describe('Saucedemo : login test', () => {
 
     beforeEach(() => {
         cy.clearAllCookies()
-        cy.visit('/')
+        cy.visit(Cypress.env('webUrl'))
 
     })
 
