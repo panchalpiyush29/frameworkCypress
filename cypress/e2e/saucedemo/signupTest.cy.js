@@ -26,7 +26,7 @@ describe('Saucedemo : signup test', () => {
         cartPage.verifyProductName(productName);
         cartPage.verifyCartQuantity();
         cartPage.checkoutMyOrder();
-        checkoutPage.fillAndSubmitYourInformation(userData.firstName, userData.lastName, userData.zipPostalCode);
+        checkoutPage.fillAndSubmitYourInformation();
         checkoutPage.verifyProductName(productName);
         checkoutPage.submitOrder();
         checkoutPage.verifyOrderSuccessMessage();

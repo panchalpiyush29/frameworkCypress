@@ -1,4 +1,11 @@
+import {faker} from "@faker-js/faker";
+
 class CheckoutPage {
+
+    const
+    firstName = faker.person.firstName();
+    lastName = faker.person.lastName();
+    zipPostalCode = faker.location.zipCode();
 
     getFirstName() {
         return '#first-name';
@@ -28,10 +35,10 @@ class CheckoutPage {
         return '.complete-header';
     }
 
-    fillAndSubmitYourInformation(firstName, lastName, zipPostalCode) {
-        cy.get(this.getFirstName()).type(firstName);
-        cy.get(this.getLastName()).type(lastName);
-        cy.get(this.getZipPostalCode()).type(zipPostalCode);
+    fillAndSubmitYourInformation() {
+        cy.get(this.getFirstName()).type(this.firstName);
+        cy.get(this.getLastName()).type(this.lastName);
+        cy.get(this.getZipPostalCode()).type(this.zipPostalCode);
         cy.get(this.getContinue()).click();
     }
 
