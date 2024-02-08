@@ -22,7 +22,7 @@ module.exports = defineConfig({
     e2e: {
         baseUrl: "https://reqres.in/api/",
         defaultCommandTimeout: 5000,
-        retries: 2,
+        retries: 1,
         chromeWebSecurity: false,
         setupNodeEvents(on, config) {
             require('cypress-mochawesome-reporter/plugin')(on);
