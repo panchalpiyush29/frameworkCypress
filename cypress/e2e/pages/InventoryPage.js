@@ -1,9 +1,7 @@
 class InventoryPage {
-
     getSauceLabsBackpack() {
         return '#add-to-cart-sauce-labs-backpack';
     }
-
 
     getSauceLabsBikeLight() {
         return '#add-to-cart-sauce-labs-bike-light';
@@ -17,7 +15,6 @@ class InventoryPage {
         return '#add-to-cart-sauce-labs-fleece-jacket';
     }
 
-
     getSauceLabsOnesie() {
         return '#add-to-cart-sauce-labs-onesie';
     }
@@ -30,11 +27,35 @@ class InventoryPage {
         return '#shopping_cart_container';
     }
 
+
     chooseAProduct(productName) {
-        if (productName === 'Sauce Labs Backpack') {
-            cy.get(this.getSauceLabsBackpack()).click();
-        } else if (productName === 'Sauce Labs Bike Light') {
-            cy.get(this.getSauceLabsBikeLight()).click();
+        switch (productName) {
+            case "Sauce Labs Backpack": {
+                cy.get(this.getSauceLabsBackpack()).click();
+                break;
+            }
+            case "Sauce Labs Bike Light": {
+                cy.get(this.getSauceLabsBikeLight()).click();
+                break;
+            }
+            case "Sauce Labs Bolt T-Shirt": {
+                cy.get(this.getSauceLabsBoltTshirt()).click();
+                break;
+            }
+            case "Sauce Labs Fleece Jacket": {
+                cy.get(this.getSauceLabsFleeceJacket()).click();
+                break;
+            }
+
+            case "Sauce Labs Onesie": {
+                cy.get(this.getSauceLabsOnesie()).click();
+                break;
+            }
+
+            case "Test.allTheThings() T-Shirt (Red)": {
+                cy.get(this.getSauceLabsTestAllTheThingsTshirt()).click();
+                break;
+            }
         }
     }
 

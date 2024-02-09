@@ -24,7 +24,7 @@ class CheckoutPage {
     }
 
     getProductName() {
-        return '#item_0_title_link';
+        return '.inventory_item_name';
     }
 
     getFinishButton() {

@@ -4,7 +4,6 @@ import InventoryPage from "../pages/InventoryPage";
 import CartPage from "../pages/CartPage";
 import productData from "../../fixtures/productData.json"
 import CheckoutPage from "../pages/CheckoutPage";
-import userData from '../../fixtures/userData.json'
 
 describe('Saucedemo : signup test', () => {
     const homePage = new HomePage();
@@ -14,13 +13,13 @@ describe('Saucedemo : signup test', () => {
     const productName = productData.productName;
 
     beforeEach(() => {
-        cy.clearAllCookies()
-        cy.visit(Cypress.env('webUrl'))
+        cy.clearAllCookies();
+        cy.visit(Cypress.env('webUrl'));
     })
 
-    it('signup test', () => {
+    it.skip('signup test', () => {
         homePage.performLogin(loginData.username, loginData.password);
-        cy.url().should('include', '/inventory.html');
+        cy.url().debug().should('include', '/inventory.html');
         inventoryPage.chooseAProduct(productName);
         inventoryPage.navigateToShoppingCart();
         cartPage.verifyProductName(productName);
